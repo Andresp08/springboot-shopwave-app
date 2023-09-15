@@ -1,6 +1,6 @@
 package com.shopwave.accountservice.repository.user;
 
-import com.shopwave.accountservice.model.entities.user.User;
+import com.shopwave.accountservice.model.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

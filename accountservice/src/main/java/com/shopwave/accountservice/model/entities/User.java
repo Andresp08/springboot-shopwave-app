@@ -1,6 +1,5 @@
-package com.shopwave.accountservice.model.entities.user;
+package com.shopwave.accountservice.model.entities;
 
-import com.shopwave.accountservice.model.entities.user.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
