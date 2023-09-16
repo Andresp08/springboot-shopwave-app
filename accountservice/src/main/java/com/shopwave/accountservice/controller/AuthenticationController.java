@@ -3,6 +3,7 @@ package com.shopwave.accountservice.controller;
 import com.shopwave.accountservice.model.dtos.request.AuthenticationRequest;
 import com.shopwave.accountservice.model.dtos.request.RegisterRequest;
 import com.shopwave.accountservice.model.dtos.response.AuthenticationResponse;
+import com.shopwave.accountservice.model.entities.User;
 import com.shopwave.accountservice.service.implementation.AuthenticationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
@@ -24,7 +25,7 @@ public class AuthenticationController {
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public ResponseEntity<AuthenticationResponse> register(
+    public ResponseEntity<User> register(
             @RequestBody RegisterRequest request
     ) {
         return ResponseEntity.ok(authenticationService.register(request));

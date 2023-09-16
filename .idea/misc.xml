@@ -8,7 +8,16 @@
         <option value="$PROJECT_DIR$/discoveryservice/pom.xml" />
         <option value="$PROJECT_DIR$/configservice/pom.xml" />
         <option value="$PROJECT_DIR$/accountservice/pom.xml" />
+        <option value="$PROJECT_DIR$/../session/accountservice/pom.xml" />
+        <option value="$PROJECT_DIR$/catalogservice/pom.xml" />
+        <option value="$PROJECT_DIR$/shoppingcartservice/pom.xml" />
+        <option value="$PROJECT_DIR$/shippingservice/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../session/accountservice/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_20" project-jdk-name="11" project-jdk-type="JavaSDK">
