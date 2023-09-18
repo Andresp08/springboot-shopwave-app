@@ -1,4 +1,4 @@
-package com.shopwave.catalogservice.exception;
+package com.shopwave.shoppingcartservice.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

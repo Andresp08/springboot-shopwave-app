@@ -52,10 +52,7 @@ public class ProductService implements IProductService {
             response.setResponseStatus(ResponseStatus.SUCCESS);
             response.setIndividualOperationMessageResponse("Product updated successfully");
 
-        }  catch (ResourceNotFoundException e) {
-            response.setIndividualOperationMessageResponse(e.getMessage());
-            response.setResponseStatus(ResponseStatus.FAILED);
-        } catch (Exception e) {
+        }  catch (Exception e) {
             response.setIndividualOperationMessageResponse("Error while updating product " + e.getMessage());
             response.setResponseStatus(ResponseStatus.FAILED);
         }
@@ -72,9 +69,6 @@ public class ProductService implements IProductService {
             response.setIndividualOperationEntityResponse(foundProduct);
             response.setResponseStatus(ResponseStatus.SUCCESS);
             response.setIndividualOperationMessageResponse("Product deleted successfully");
-        } catch (ResourceNotFoundException e) {
-            response.setIndividualOperationMessageResponse(e.getMessage());
-            response.setResponseStatus(ResponseStatus.FAILED);
         } catch (Exception e) {
             response.setIndividualOperationMessageResponse("Error while deleting product " + e.getMessage());
             response.setResponseStatus(ResponseStatus.FAILED);
@@ -91,9 +85,6 @@ public class ProductService implements IProductService {
             response.setIndividualOperationEntityResponse(foundProduct);
             response.setResponseStatus(ResponseStatus.SUCCESS);
             response.setIndividualOperationMessageResponse("Product found successfully");
-        } catch (ResourceNotFoundException e) {
-            response.setIndividualOperationMessageResponse(e.getMessage());
-            response.setResponseStatus(ResponseStatus.FAILED);
         } catch (Exception e) {
             response.setIndividualOperationMessageResponse("Error while found product " + e.getMessage());
             response.setResponseStatus(ResponseStatus.FAILED);
@@ -111,10 +102,11 @@ public class ProductService implements IProductService {
             response.setIndividualOperationEntityResponse(foundProduct);
             response.setResponseStatus(ResponseStatus.SUCCESS);
             response.setIndividualOperationMessageResponse("Product found successfully");
-        } catch (ResourceNotFoundException e) {
-            response.setIndividualOperationMessageResponse(e.getMessage());
+        } catch (IllegalArgumentException e) {
+            response.setIndividualOperationMessageResponse("Error, Invalid argument: " + e.getMessage());
             response.setResponseStatus(ResponseStatus.FAILED);
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             response.setIndividualOperationMessageResponse("Error while found product " + e.getMessage());
             response.setResponseStatus(ResponseStatus.FAILED);
         }
