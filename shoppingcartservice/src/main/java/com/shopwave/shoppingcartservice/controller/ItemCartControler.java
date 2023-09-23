@@ -2,6 +2,7 @@ package com.shopwave.shoppingcartservice.controller;
 
 import com.shopwave.shoppingcartservice.model.ItemCart;
 import com.shopwave.shoppingcartservice.model.dtos.request.OperationRequest;
+import com.shopwave.shoppingcartservice.model.dtos.request.QuantityUpdate;
 import com.shopwave.shoppingcartservice.model.dtos.response.OperationResponse;
 import com.shopwave.shoppingcartservice.service.interfaces.IItemCartService;
 import lombok.RequiredArgsConstructor;
@@ -32,5 +33,15 @@ public class ItemCartControler {
     )
     public OperationResponse<ItemCart> deleteExistingItemCart(@PathVariable("itemCartId") Integer itemCartId) {
         return itemCartService.deleteExistingItemCart(itemCartId);
+    }
+
+    @PutMapping(
+            value = "/{itemCartId}"
+    )
+    public OperationResponse<ItemCart> updateProductQuantityByItemCartId(
+            @PathVariable("itemCartId") Integer itemCartId,
+            @RequestBody QuantityUpdate productQuantity
+    ) {
+        return itemCartService.updateProductQuantityByItemCartId(itemCartId,productQuantity.getQuantity());
     }
 }

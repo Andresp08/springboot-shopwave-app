@@ -4,7 +4,6 @@ import com.shopwave.catalogservice.model.enums.ProductCategory;
 import lombok.*;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 
 @Entity
 @Table(name = "product")
@@ -26,7 +25,7 @@ public class Product {
     private String description;
 
     @Column(nullable = false)
-    private BigDecimal price;
+    private Double price;
 
     @Column(nullable = false)
     private int stock;

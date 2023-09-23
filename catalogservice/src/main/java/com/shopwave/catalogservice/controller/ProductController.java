@@ -53,9 +53,10 @@ public class ProductController {
             value = "/{productId}",
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public OperationResponse<Product> getProductInformationByCategory(
+    public OperationResponse<Product> getProductInformationByProductId(
             @PathVariable("productId") Integer productId
     ) {
+        System.out.println("extrayendo informacionnnnn");
         return productService.getProductInformationByProductId(productId);
     }
 

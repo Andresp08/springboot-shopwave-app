@@ -3,7 +3,6 @@ package com.shopwave.shoppingcartservice.model;
 import lombok.*;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 
 @Entity
 @Table(name = "item_cart")
@@ -22,5 +21,8 @@ public class ItemCart {
     private Integer productId;
 
     @Column(nullable = false)
-    private BigDecimal totalPrice;
+    private int quantity;
+
+    @Column(nullable = false)
+    private Double totalPrice;
 }
